@@ -1,0 +1,21 @@
+import math
+
+def scientific_calculator():
+    print("Welcome to the Scientific Calculator!")
+    print("Available operations: +, -, *, /, ^, sqrt, sin, cos, tan, log, exit")
+
+    while True:
+        expression = input("Enter a mathematical expression: ")
+        
+        if expression.lower() == 'exit':
+            print("Exiting the calculator.")
+            break
+        
+        try:
+            result = eval(expression)
+            print("Result:", result)
+        except Exception as e:
+            print("Error:", e)
+
+if __name__ == "__main__":
+    scientific_calculator()
